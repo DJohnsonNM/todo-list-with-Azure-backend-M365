@@ -1,0 +1,51 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.16",
+    "version": "1.0.0",
+    "id": "60e8e58b-3e90-4663-825a-9741916ba69b", 
+    "packageName": "com.microsoft.teams.extension",
+    "developer": {
+        "name": "Teams App, Inc.",
+        "websiteUrl": "${{TAB_ENDPOINT}}",
+        "privacyUrl": "${{TAB_ENDPOINT}}/index.html#/privacy",
+        "termsOfUseUrl": "${{TAB_ENDPOINT}}/index.html#/termsofuse"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "toDoList${{APP_NAME_SUFFIX}}",
+        "full": "Full name for toDoList"
+    },
+    "description": {
+        "short": "Short description of toDoList",
+        "full": "Full description of toDoList"
+    },
+    "accentColor": "#FFFFFF",
+    "bots": [],
+    "composeExtensions": [],
+    "configurableTabs": [],
+    "staticTabs": [
+        {
+            "entityId": "index",
+            "name": "Personal Tab",
+            "contentUrl": "${{TAB_ENDPOINT}}/index.html#/tab",
+            "websiteUrl": "${{TAB_ENDPOINT}}/index.html#/tab",
+            "scopes": [
+                "personal"
+            ]
+        }
+    ],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "${{TAB_DOMAIN}}"
+    ],
+    "webApplicationInfo": {
+        "id": "${{AAD_APP_CLIENT_ID}}",
+        "resource": "api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"
+    }
+}
